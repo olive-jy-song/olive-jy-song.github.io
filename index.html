@@ -20,7 +20,28 @@
             padding: 60px 24px 80px;
         }
 
-        header { margin-bottom: 48px; }
+        header {
+            margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 1px solid #eee;
+        }
+
+        .header-text { flex: 1; min-width: 0; }
+
+        @media (max-width: 560px) {
+            header { flex-direction: column; text-align: center; gap: 20px; }
+            .avatar { width: 120px; height: 120px; }
+        }
 
         h1 {
             font-size: 2rem;
@@ -118,14 +139,17 @@
     <div class="container">
 
         <header>
-            <h1>Olive Song</h1>
-            <p class="subtitle">
-                NLP Researcher
-            </p>
-            <div class="links">
-                <a href="mailto:your@email.com">Email</a>
-                <a href="https://github.com/olive-jy-song">GitHub</a>
-                <a href="https://scholar.google.com/">Google Scholar</a>
+            <img class="avatar" src="https://github.com/olive-jy-song.png" alt="Olive Song">
+            <div class="header-text">
+                <h1>Olive Song</h1>
+                <p class="subtitle">
+                    Research Lead, RL Training @ MiniMax
+                </p>
+                <div class="links">
+                    <a href="mailto:your@email.com">Email</a>
+                    <a href="https://github.com/olive-jy-song">GitHub</a>
+                    <a href="https://scholar.google.com/">Google Scholar</a>
+                </div>
             </div>
         </header>
 
