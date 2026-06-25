@@ -111,22 +111,19 @@
         .tag {
             display: inline-block;
             font-family: 'SF Mono', Menlo, Consolas, monospace;
-            font-size: 0.7rem;
+            font-size: 0.82rem;
             font-weight: 500;
-            text-transform: lowercase;
-            letter-spacing: 0.04em;
-            padding: 1px 7px;
-            border-radius: 3px;
-            border: 1px solid;
-            background: transparent;
+            letter-spacing: 0.02em;
             flex-shrink: 0;
-            min-width: 48px;
-            text-align: center;
+            min-width: 56px;
         }
 
-        .tag-paper { color: #4a5a6a; border-color: #c5cdd6; }
-        .tag-blog  { color: #5a6e55; border-color: #c8d3c2; }
-        .tag-talk  { color: #8a6a48; border-color: #d8c8b0; }
+        .tag::before { content: "["; color: #aaa; }
+        .tag::after  { content: "]"; color: #aaa; }
+
+        .tag-paper { color: #2a6bb0; }
+        .tag-blog  { color: #2d8f4e; }
+        .tag-talk  { color: #c2701c; }
 
         ul.entry-list a {
             color: #333;
